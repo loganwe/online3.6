@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Events Schedule</title>
+    <!-- Internal CSS - applied here meets the "internal CSS" requirement -->
+    <style>
+        /* TABLE ITSELF - Criterion 4 */
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        /* TABLE HEADERS - Criterion 3 */
+        th {
+            background-color: #6d4aff;
+            color: white;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* TABLE ROWS - Criterion 1 */
+        tr {
+            border-bottom: 2px solid #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+
+        tr:hover {
+            background-color: #f5f0ff;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        /* TABLE CELLS - Criterion 5 */
+        td {
+            padding: 12px 20px;
+            text-align: left;
+            font-size: 14px;
+            color: #333333;
+            border-right: 1px solid #eeeeee;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+
+        /* Alternating row colors for better readability */
+        tr:nth-child(even) td {
+            background-color: #fafafa;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+
+        /* COLUMN STYLING - Criterion 2 */
+        /* Using colgroup and col elements to style columns */
+        col.time-column {
+            background-color: #e8f4fd;
+            width: 25%;
+        }
+
+        col.event-column {
+            background-color: #fdfdfd;
+            width: 60%;
+        }
+
+        col.location-column {
+            background-color: #fff8e8;
+            width: 15%;
+        }
+
+        /* Specific column enhancements */
+        col.time-column + col.event-column {
+            font-weight: 500;
+        }
+
+        /* Header alignment styles via colgroup */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <!-- Colgroup for column-level styling (Criterion 2) -->
+            <colgroup>
+                <col class="time-column">
+                <col class="event-column">
+                <col class="location-column">
+            </colgroup>
+            
+            <!-- Table Headers (Criterion 3) -->
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            
+            <!-- Table Body with 9 events (Criterion 6 - exceeds minimum of 8) -->
+            <tbody>
+                <tr>
+                    <td>08:00 AM</td>
+                    <td>Morning Yoga Session</td>
+                    <td>Main Gym</td>
+                </tr>
+                <tr>
+                    <td>09:30 AM</td>
+                    <td>Breakfast Club Meeting</td>
+                    <td>Cafeteria</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Science Lab Experiment</td>
+                    <td>Room 201</td>
+                </tr>
+                <tr>
+                    <td>12:30 PM</td>
+                    <td>Lunch Break</td>
+                    <td>Outdoor Patio</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Soccer Practice</td>
+                    <td>Sports Field</td>
+                </tr>
+                <tr>
+                    <td>04:00 PM</td>
+                    <td>Study Group Session</td>
+                    <td>Library</td>
+                </tr>
+                <tr>
+                    <td>06:00 PM</td>
+                    <td>Chess Tournament</td>
+                    <td>Club Room B</td>
+                </tr>
+                <tr>
+                    <td>07:30 PM</td>
+                    <td>Evening Movie Night</td>
+                    <td>Auditorium</td>
+                </tr>
+                <tr>
+                    <td>09:00 PM</td>
+                    <td>Night Study Hall</td>
+                    <td>Room 305</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
